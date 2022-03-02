@@ -1,13 +1,36 @@
 <!DOCTYPE html>
 <html lang="zh">
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport"
-    content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
-  <title>大屏可视化项目</title>
-</head>
-<body>
-<div id="root"></div>
-<script type="module" src="/src/main.tsx"></script>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"
+        />
+        <title>大屏可视化项目</title>
+        <script>
+            const cWidth = document.documentElement.clientWidth;
+            const cHeight = document.documentElement.clientHeight;
+            let pWidth;
+            if (cWidth / cHeight > 16 / 9) {
+                pWidth = (cHeight * 16) / 9;
+            } else {
+                pWidth = cWidth;
+            }
+            const pHeight = (pWidth * 9) / 16;
+            console.log(pWidth, pHeight);
+            const string = `<style> html{
+              font-size:${pWidth / 100}px;
+            } </style>`;
+            document.write(string);
+        </script>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script>
+            root.style.width = pWidth + 'px';
+            root.style.height = pHeight + 'px';
+            root.style.marginTop = cHeight / 2 - pHeight / 2 + 'px';
+        </script>
+        <script type="module" src="/src/main.tsx"></script>
+    </body>
 </html>
