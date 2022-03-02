@@ -1,1 +1,8 @@
-@import "../shared/helper";
+@import '../shared/helper';
+
+.home {
+    header {
+        height: px(99);
+        background-size: cover;
+    }
+}
