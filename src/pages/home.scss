@@ -2,14 +2,16 @@
 
 .home {
     flex: 1;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    background: #010301;
-    header {
+    background: #010310;
+    color: white;
+    > header {
         height: px(99);
         background-size: cover;
     }
-    main {
+    > main {
         padding-top: px(30);
         flex: 1;
         display: grid;
@@ -19,9 +21,14 @@
         grid-column-gap: px(28);
         grid-row-gap: px(28);
         > section {
+            text-align: center;
+        }
+        .bordered {
             border: 1px solid #0764bc;
             border-radius: 4px;
             position: relative;
+            box-shadow: 0 0 2px 0 #0e325f, inset 0 0 2px 0 #0e325f;
+            background: #0c1139;
             &::before {
                 content: '';
                 position: absolute;
@@ -49,6 +56,26 @@
         }
         > .section5 {
             grid-area: box5;
+        }
+        .guanxiatongji {
+            height: px(315);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h2 {
+                flex-shrink: 0;
+                border: 1px solid #0a5299;
+                border-bottom-left-radius: 4px;
+                border-bottom-right-radius: 4px;
+                font-size: px(22);
+                line-height: px(24);
+                padding: px(10) px(28);
+                text-shadow: 0 0 px(3) white;
+            }
+            .chart {
+                flex: 1;
+                width: 100%;
+            }
         }
     }
 }

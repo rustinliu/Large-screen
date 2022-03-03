@@ -10,11 +10,11 @@
         <script>
             const cWidth = document.documentElement.clientWidth;
             const cHeight = document.documentElement.clientHeight;
-            let pWidth;
+
             if (cWidth / cHeight > 16 / 9) {
-                pWidth = (cHeight * 16) / 9;
+                window.pWidth = (cHeight * 16) / 9;
             } else {
-                pWidth = cWidth;
+                window.pWidth = cWidth;
             }
             const pHeight = (pWidth * 9) / 16;
             console.log(pWidth, pHeight);
