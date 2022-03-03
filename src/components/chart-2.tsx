@@ -42,6 +42,7 @@ export const Chart2 = () => {
                     y: px(15),
                     x2: px(0),
                     y2: px(10),
+                    containLabel: true,
                 },
                 series: [
                     {

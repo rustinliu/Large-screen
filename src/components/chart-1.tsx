@@ -57,6 +57,7 @@ export const Chart1 = () => {
                     y: px(10),
                     x2: px(10),
                     y2: px(40),
+                    containLabel: true,
                 },
             })
         );
