@@ -1,75 +1,49 @@
 import React, { useEffect, useRef } from 'react';
 import * as echarts from 'echarts';
+import { px } from '../shared/px';
+import { baseEchartOptions } from '../shared/base-echart-options';
+import { createEchartsOptions } from '../shared/create-echarts-options';
 
-const px = (n) => (n / 2420) * (window as any).pWidth;
 export const Chart2 = () => {
     const divRef = useRef(null);
     useEffect(() => {
         var myChart = echarts.init(divRef.current);
-        myChart.setOption({
-            textStyle: {
-                fontSize: px(12),
-                color: '#79839E',
-            },
-            title: { show: false },
-            legend: { show: false },
-            xAxis: {
-                data: [
-                    '兰州新区',
-                    '兰州新区',
-                    '兰州新区',
-                    '兰州新区',
-                    '兰州新区',
-                    '兰州新区',
-                    '兰州新区',
-                    '兰州新区',
-                    '兰州新区',
-                ],
-                axisTick: { show: false },
-                axisLine: {
-                    lineStyle: { color: '#083B70' },
+        myChart.setOption(
+            createEchartsOptions({
+                ...baseEchartOptions,
+                grid: {
+                    x: px(100),
+                    y: px(40),
+                    x2: px(40),
+                    y2: px(40),
                 },
-                axisLabel: {
-                    fontSize: px(12),
-                    formatter(val) {
-                        if (val.length > 2) {
-                            const array = val.split('');
-                            array.splice(2, 0, '\n');
-                            return array.join('');
-                        } else {
-                            return val;
-                        }
+                xAxis: {
+                    type: 'value',
+                    boundaryGap: [0, 0.01],
+                },
+                yAxis: {
+                    type: 'category',
+                    data: ['巴西', '印尼', '美国', '印度', '中国', '世界人口(万)'],
+                },
+                series: [
+                    {
+                        name: '2011年',
+                        type: 'bar',
+                        data: [18203, 23489, 29034, 104970, 131744, 630230],
                     },
-                },
-            },
-            grid: {
-                x: px(40),
-                y: px(40),
-                x2: px(40),
-                y2: px(40),
-            },
-            yAxis: {
-                splitLine: { show: false },
-                axisLine: {
-                    show: true,
-                    lineStyle: { color: '#083B70' },
-                },
-                axisLabel: {
-                    fontSize: px(12),
-                },
-            },
-            series: [
-                {
-                    type: 'bar',
-                    data: [10, 20, 36, 41, 15, 26, 37, 18, 29],
-                },
-            ],
-        });
+                    {
+                        name: '2012年',
+                        type: 'bar',
+                        data: [19325, 23438, 31000, 121594, 134141, 681807],
+                    },
+                ],
+            })
+        );
     }, []);
 
     return (
         <div className='bordered guanxiatongji'>
-            <h2>案发派出所管辖统计</h2>
+            <h2>案件破获排名</h2>
             <div ref={divRef} className='chart'></div>
         </div>
     );

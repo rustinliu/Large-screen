@@ -11,10 +11,9 @@ export const Home = () => {
             <main>
                 <section className='section1'>
                     <Chart1 />
-                </section>
-                <section className='bordered section2'>
                     <Chart2 />
                 </section>
+                <section className='bordered section2'></section>
                 <section className='bordered section3'></section>
                 <section className='bordered section4'></section>
                 <section className='bordered section5'></section>
