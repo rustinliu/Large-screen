@@ -111,7 +111,8 @@
         }
         .guanxiatongji,
         .pohuopaiming,
-        .faanqushi {
+        .faanqushi,
+        .anfashiduan {
             height: px(315);
             display: flex;
             flex-direction: column;
@@ -160,7 +161,8 @@
                 }
             }
         }
-        .faanqushi {
+        .faanqushi,
+        .anfashiduan {
             height: px(363);
         }
     }
