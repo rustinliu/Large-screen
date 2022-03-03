@@ -12,6 +12,6 @@ export const baseEchartOptions = {
         y: px(10),
         x2: px(10),
         y2: px(10),
+        containLabel: true,
     },
-    containLabel: true,
 };
