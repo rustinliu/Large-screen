@@ -114,7 +114,8 @@
         .faanqushi,
         .anfashiduan,
         .zhanguo,
-        .jiguan {
+        .jiguan,
+        .nianlingdu {
             height: px(315);
             display: flex;
             flex-direction: column;
@@ -137,6 +138,65 @@
             .chart {
                 flex: 1;
                 width: 100%;
+            }
+        }
+        .nianlingdu {
+            display: flex;
+            flex-direction: column;
+            height: px(363);
+            > .charts {
+                padding: px(30);
+            }
+            &-tu1,
+            &-tu2,
+            &-tu3 {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+            }
+            &-tu1,
+            &-tu2 {
+                .legend {
+                    @extend %legend;
+                    .male {
+                        background: #33a4fa;
+                    }
+                    .female {
+                        background: #8d70f8;
+                    }
+                }
+                .chart {
+                    position: relative;
+                    display: flex;
+                    > .main {
+                        flex: 1;
+                    }
+                    > .text {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        color: #33a4fa;
+                        font-size: px(40);
+                        text-shadow: 0 0 px(20) #33a4fa;
+                        font-weight: bold;
+                    }
+                }
+            }
+            &-tu2 {
+                width: px(290);
+                flex-shrink: 0;
+                .legend {
+                    justify-content: flex-start;
+                }
+            }
+            &-tu3 {
+                border: 1px solid #08397d;
+                h3 {
+                    font-size: px(20);
+                    color: #7ab6db;
+                    margin-top: px(6);
+                }
             }
         }
         .jiguan {
