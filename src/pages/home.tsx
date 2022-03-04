@@ -12,6 +12,7 @@ import { Chart8 } from '../components/chart-8';
 import { Chart9 } from '../components/chart-9';
 import { Chart10 } from '../components/chart-10';
 import { Chart11 } from '../components/chart-11';
+import { Chart12 } from '../components/chart-12';
 export const Home = () => {
     return (
         <div className='home'>
@@ -45,6 +46,12 @@ export const Home = () => {
                         <div className='charts'>
                             <Chart10 />
                             <Chart11 />
+                        </div>
+                    </div>
+                    <div className='bordered row2 anfajiedao'>
+                        <h2>案发街道统计</h2>
+                        <div className='charts'>
+                            <Chart12 />
                         </div>
                     </div>
                 </section>
