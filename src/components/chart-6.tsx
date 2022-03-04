@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import * as echarts from 'echarts';
-import { createEchartsOptions } from '../shared/create-echarts-options';
-import { px } from '../shared/px';
+import { createEchartsOptions } from '../common/create-echarts-options';
+import { px } from '../common/px';
 import china from '../geo/china.json';
 
 export const Chart6 = () => {
@@ -62,7 +62,7 @@ export const Chart6 = () => {
                     <span className='icon' style={{ background: colors['湖北省'] }} />
                     湖北省
                 </div>
-                <div className='notes'>此地图仅显示了中国的部分区域</div>
+                <div className='notes'>该图仅显示中国部分区域</div>
             </div>
         </div>
     );

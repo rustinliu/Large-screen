@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import * as echarts from 'echarts';
-import { createEchartsOptions } from '../shared/create-echarts-options';
-import { px } from '../shared/px';
+import { createEchartsOptions } from '../common/create-echarts-options';
+import { px } from '../common/px';
 
 export const Chart8 = () => {
     const divRef = useRef(null);

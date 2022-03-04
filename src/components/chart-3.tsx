@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import * as echarts from 'echarts';
-import { createEchartsOptions } from '../shared/create-echarts-options';
-import { px } from '../shared/px';
+import { createEchartsOptions } from '../common/create-echarts-options';
+import { px } from '../common/px';
 
 export const Chart3 = () => {
     const divRef = useRef(null);
@@ -25,7 +25,7 @@ export const Chart3 = () => {
                 xAxis: {
                     type: 'category',
                     boundaryGap: false,
-                    data: [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018],
+                    data: [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022],
                     splitLine: { show: true, lineStyle: { color: '#073E78' } },
                     axisTick: { show: false },
                     axisLine: { show: false },

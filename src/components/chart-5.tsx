@@ -19,7 +19,7 @@ export const Chart5 = () => {
                 </thead>
                 <tbody>
                     <tr>
-                        <td>2015</td>
+                        <td>2020</td>
                         <td>2</td>
                         <td>3</td>
                         <td>4</td>
@@ -29,7 +29,7 @@ export const Chart5 = () => {
                         <td>8</td>
                     </tr>
                     <tr>
-                        <td>2016</td>
+                        <td>2021</td>
                         <td>2</td>
                         <td>3</td>
                         <td>4</td>
@@ -39,7 +39,7 @@ export const Chart5 = () => {
                         <td>8</td>
                     </tr>
                     <tr>
-                        <td>2017</td>
+                        <td>2022</td>
                         <td>2</td>
                         <td>3</td>
                         <td>4</td>

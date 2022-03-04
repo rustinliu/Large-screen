@@ -1,4 +1,4 @@
-@import '../shared/helper';
+@import '../common/helper';
 
 %legend {
     height: px(40);
@@ -23,21 +23,65 @@
     background: #010310;
     color: white;
     font-size: px(16);
+
     > header {
-        height: px(99);
-        background-size: cover;
-        width: px(2420);
-        margin: 0 auto;
+        height: px(68);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #eee;
+        font-size: px(15);
+        background: #0c0d2b;
+        position: relative;
+        text-shadow: 0 0 10px #1d393d, 0 0 20px #1d393d, 0 0 30px #1d393d, 0 0 40px #1d393d;
+        &::before {
+            content: '';
+            position: absolute;
+            height: 1px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(
+                90deg,
+                rgba(16, 48, 65, 1) 0%,
+                rgba(0, 0, 0, 0) 25%,
+                rgba(26, 58, 75, 1) 50%,
+                rgba(0, 0, 0, 0) 75%,
+                rgba(16, 48, 65, 1) 100%
+            );
+        }
+        > h1 {
+            font-size: px(39);
+            font-weight: bold;
+            margin: 0;
+        }
     }
     > footer {
         height: px(68);
-        border: 1px solid #0d2d59;
+        text-shadow: 0 0 10px #1d393d, 0 0 20px #1d393d, 0 0 30px #1d393d, 0 0 40px #1d393d;
         margin: px(20) 0 1px;
         border-radius: 4px;
         background: #0c0d2b;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
+        font-size: px(20);
+        &::before {
+            content: '';
+            position: absolute;
+            height: 1px;
+            bottom: px(68);
+            left: 0;
+            right: 0;
+            background: linear-gradient(
+                270deg,
+                rgba(16, 48, 65, 1) 0%,
+                rgba(0, 0, 0, 0) 25%,
+                rgba(26, 58, 75, 1) 50%,
+                rgba(0, 0, 0, 0) 75%,
+                rgba(16, 48, 65, 1) 100%
+            );
+        }
     }
     > main {
         width: px(2420);
@@ -117,7 +161,8 @@
         .jiguan,
         .nianlingdu,
         .anfaleixing,
-        .anfajiedao {
+        .anfajiedao,
+        .zuoanshouduan {
             height: px(315);
             display: flex;
             flex-direction: column;
@@ -281,7 +326,8 @@
         .anfashiduan {
             height: px(363);
         }
-        .zhanguo {
+        .zhanguo,
+        .zuoanshouduan {
             padding: 0 px(24);
             > table {
                 width: 100%;
@@ -303,6 +349,15 @@
                         height: px(50);
                         width: px(84);
                         background: #1c2456;
+                    }
+                }
+            }
+        }
+        .zuoanshouduan {
+            > table {
+                tbody {
+                    td {
+                        height: px(26);
                     }
                 }
             }

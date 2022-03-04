@@ -14,10 +14,15 @@ import { Chart10 } from '../components/chart-10';
 import { Chart11 } from '../components/chart-11';
 import { Chart12 } from '../components/chart-12';
 import { Chart13 } from '../components/chart-13';
+import { Chart14 } from '../components/chart-14';
 export const Home = () => {
     return (
         <div className='home'>
-            <header style={{ backgroundImage: `url(${headerBg})` }} />
+            <header>
+                <span></span>
+                <h1>公安部合成作战平台</h1>
+                <span></span>
+            </header>
             <main>
                 <section className='section1'>
                     <Chart1 />
@@ -50,16 +55,22 @@ export const Home = () => {
                         </div>
                     </div>
                     <div className='bordered row2 anfajiedao'>
-                        <h2>案发街道统计</h2>
+                        <h2>案发城市统计</h2>
                         <div className='charts'>
                             <Chart12 />
                             <Chart13 />
                         </div>
                     </div>
+                    <div className='bordered row3 zuoanshouduan'>
+                        <h2>作案手段分析</h2>
+                        <Chart14 />
+                    </div>
                 </section>
             </main>
             <footer>
-                <a href='//github.com/rustinliu'>Rustin</a>
+                <span></span>
+                <a href='//github.com/rustinliu'>@Rustin</a>
+                <span></span>
             </footer>
         </div>
     );
