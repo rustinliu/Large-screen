@@ -6,22 +6,23 @@ import { createEchartsOptions } from '../common/create-echarts-options';
 
 export const Chart1 = () => {
     const divRef = useRef(null);
-    useEffect(() => {
-        var myChart = echarts.init(divRef.current);
-        myChart.setOption(
+    const myChart = useRef(null);
+    const data = [
+        { name: 'A开发区', count: 32 },
+        { name: 'B开发区', count: 43 },
+        { name: 'C开发区', count: 54 },
+        { name: 'D开发区', count: 35 },
+        { name: 'E开发区', count: 16 },
+        { name: 'F开发区', count: 47 },
+        { name: 'G开发区', count: 22 },
+        { name: 'H开发区', count: 33 },
+        { name: 'I开发区', count: 44 },
+    ];
+    const setData = (data) => {
+        myChart.current.setOption(
             createEchartsOptions({
                 xAxis: {
-                    data: [
-                        '兰州新区',
-                        '兰州新区',
-                        '兰州新区',
-                        '兰州新区',
-                        '兰州新区',
-                        '兰州新区',
-                        '兰州新区',
-                        '兰州新区',
-                        '兰州新区',
-                    ],
+                    data: data.map((i) => i.name),
                     axisTick: { show: false },
                     axisLine: {
                         lineStyle: { color: '#083B70' },
@@ -49,7 +50,7 @@ export const Chart1 = () => {
                 series: [
                     {
                         type: 'bar',
-                        data: [10, 20, 36, 41, 15, 26, 37, 18, 29],
+                        data: data.map((i) => i.count),
                     },
                 ],
                 grid: {
@@ -61,8 +62,27 @@ export const Chart1 = () => {
                 },
             })
         );
+    };
+    useEffect(() => {
+        myChart.current = echarts.init(divRef.current);
+        setData(data);
     }, []);
-
+    useEffect(() => {
+        setInterval(() => {
+            const newData = [
+                { name: 'A开发区', count: Math.floor(Math.random() * (50 - 10 + 1)) + 10 },
+                { name: 'B开发区', count: Math.floor(Math.random() * (50 - 10 + 1)) + 10 },
+                { name: 'C开发区', count: Math.floor(Math.random() * (50 - 10 + 1)) + 10 },
+                { name: 'D开发区', count: Math.floor(Math.random() * (50 - 10 + 1)) + 10 },
+                { name: 'E开发区', count: Math.floor(Math.random() * (50 - 10 + 1)) + 10 },
+                { name: 'F开发区', count: Math.floor(Math.random() * (50 - 10 + 1)) + 10 },
+                { name: 'G开发区', count: Math.floor(Math.random() * (50 - 10 + 1)) + 10 },
+                { name: 'H开发区', count: Math.floor(Math.random() * (50 - 10 + 1)) + 10 },
+                { name: 'I开发区', count: Math.floor(Math.random() * (50 - 10 + 1)) + 10 },
+            ];
+            setData(newData);
+        }, 1000);
+    }, []);
     return (
         <div className='bordered guanxiatongji'>
             <h2>案发派出所管辖统计</h2>

@@ -4,20 +4,9 @@ import { createEchartsOptions } from '../common/create-echarts-options';
 
 export const Chart13 = () => {
     const divRef = useRef(null);
-    const data = [
-        { value: 0.08, name: '东岗路' },
-        { value: 0.06, name: '段家滩' },
-        { value: 0.11, name: '雁北' },
-        { value: 0.09, name: '五泉山' },
-        { value: 0.12, name: '中山路' },
-        { value: 0.06, name: '庆阳路' },
-        { value: 0.08, name: '武都路' },
-        { value: 0.08, name: '酒泉路' },
-        { value: 0.08, name: '天水路' },
-    ];
-    useEffect(() => {
-        var myChart = echarts.init(divRef.current);
-        myChart.setOption(
+    const myChart = useRef(null);
+    const setData = (data) => {
+        myChart.current.setOption(
             createEchartsOptions({
                 xAxis: {
                     data: data.map((i) => i.name),
@@ -68,6 +57,37 @@ export const Chart13 = () => {
                 ],
             })
         );
+    };
+    const data = [
+        { value: 0.08, name: 'A市' },
+        { value: 0.06, name: 'B市' },
+        { value: 0.11, name: 'C市' },
+        { value: 0.09, name: 'D市' },
+        { value: 0.12, name: 'E市' },
+        { value: 0.06, name: 'F市' },
+        { value: 0.08, name: 'G市' },
+        { value: 0.08, name: 'H市' },
+        { value: 0.08, name: 'I市' },
+    ];
+    useEffect(() => {
+        myChart.current = echarts.init(divRef.current);
+        setData(data);
+    }, []);
+    useEffect(() => {
+        setInterval(() => {
+            const newData = [
+                { value: Math.random() / 10, name: 'A市' },
+                { value: Math.random() / 10, name: 'B市' },
+                { value: Math.random() / 10, name: 'C市' },
+                { value: Math.random() / 10, name: 'D市' },
+                { value: Math.random() / 10, name: 'E市' },
+                { value: Math.random() / 10, name: 'F市' },
+                { value: Math.random() / 10, name: 'G市' },
+                { value: Math.random() / 10, name: 'H市' },
+                { value: Math.random() / 10, name: 'I市' },
+            ];
+            setData(newData);
+        }, 1000);
     }, []);
 
     return <div ref={divRef} className='chart'></div>;
