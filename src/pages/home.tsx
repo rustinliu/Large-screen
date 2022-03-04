@@ -10,7 +10,7 @@ import { Chart6 } from '../components/chart-6';
 import { Chart7 } from '../components/chart-7';
 import { Chart8 } from '../components/chart-8';
 import { Chart9 } from '../components/chart-9';
-
+import { Chart10 } from '../components/chart-10';
 export const Home = () => {
     return (
         <div className='home'>
@@ -38,9 +38,18 @@ export const Home = () => {
                         </div>
                     </div>
                 </section>
-                <section className='bordered section5'></section>
+                <section className='section5'>
+                    <div className='bordered row1 anfaleixing'>
+                        <h2>案发类型统计</h2>
+                        <div className='charts'>
+                            <Chart10 />
+                        </div>
+                    </div>
+                </section>
             </main>
-            <footer>hi</footer>
+            <footer>
+                <a href='//github.com/rustinliu'></a>
+            </footer>
         </div>
     );
 };
