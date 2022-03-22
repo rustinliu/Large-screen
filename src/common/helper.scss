@@ -1,5 +1,5 @@
 @function px($value) {
-    @return $value / 2420 * 100rem;
+    @return calc($value / 2420) * 100rem;
 }
 $blue: #002866;
 $font-hei: -apple-system, 'Noto Sans', 'Helvetica Neue', Helvetica, 'Nimbus Sans L', Arial,
