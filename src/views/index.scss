@@ -328,6 +328,7 @@
         }
         .zhanguo,
         .zuoanshouduan {
+            user-select: none;
             padding: 0 px(24);
             > table {
                 width: 100%;

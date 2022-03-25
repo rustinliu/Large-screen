@@ -25,7 +25,8 @@ export default {
                             label: {
                                 show: true,
                                 position: 'outside',
-                                textStyle: { color: 'white', fontSize: px(20) },
+                                color: 'white',
+                                fontSize: px(20),
                                 distanceToLabelLine: 0,
                                 formatter(options) {
                                     return options.value * 100 + '%';

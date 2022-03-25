@@ -20,32 +20,32 @@ export default {
                     series: [
                         {
                             type: 'map',
-                            mapType: 'CN', // 自定义扩展图表类型
+                            map: 'CN', // 自定义扩展图表类型
                             data: [{ name: '广东省', value: 1 }],
                             label: { show: false, color: 'white' },
                             itemStyle: {
                                 areaColor: '#010D3D',
                                 color: colors['广东省'],
                                 borderColor: '#01A7F7',
-                                emphasis: {
-                                    label: { color: 'white' },
-                                    areaColor: '#5470C6',
-                                },
+                            },
+                            emphasis: {
+                                label: { color: 'white' },
+                                areaColor: '#5470C6',
                             },
                         },
                         {
                             type: 'map',
-                            mapType: 'CN',
+                            map: 'CN',
                             data: [{ name: '湖北省', value: 2 }],
                             label: { show: false, color: 'white' },
                             itemStyle: {
                                 areaColor: '#010D3D',
                                 color: colors['湖北省'],
                                 borderColor: '#01A7F7',
-                                emphasis: {
-                                    label: { color: 'white' },
-                                    areaColor: '#5470C6',
-                                },
+                            },
+                            emphasis: {
+                                label: { color: 'white' },
+                                areaColor: '#5470C6',
                             },
                         },
                     ],
