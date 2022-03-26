@@ -78,12 +78,12 @@ export default {
             setInterval(() => {
                 const newData = [
                     { value: Math.random() / 10, name: 'A市' },
-                    { value: Math.random() / 10, name: 'B市' },
-                    { value: Math.random() / 10, name: 'C市' },
+                    { value: 0.06, name: 'B市' },
+                    { value: 0.11, name: 'C市' },
                     { value: Math.random() / 10, name: 'D市' },
-                    { value: Math.random() / 10, name: 'E市' },
-                    { value: Math.random() / 10, name: 'F市' },
-                    { value: Math.random() / 10, name: 'G市' },
+                    { value: 0.12, name: 'E市' },
+                    { value: 0.06, name: 'F市' },
+                    { value: 0.08, name: 'G市' },
                     { value: Math.random() / 10, name: 'H市' },
                     { value: Math.random() / 10, name: 'I市' },
                 ];

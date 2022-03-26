@@ -24,15 +24,15 @@ export default {
             setData(data);
             setInterval(() => {
                 const newData = [
-                    { name: 'A市公安局', 2021: Math.random() * 10, 2022: Math.random() * 10 },
-                    { name: 'B市公安局', 2021: Math.random() * 10, 2022: Math.random() * 10 },
-                    { name: 'C市公安局', 2021: Math.random() * 10, 2022: Math.random() * 10 },
-                    { name: 'D市公安局', 2021: Math.random() * 10, 2022: Math.random() * 10 },
-                    { name: 'E市公安局', 2021: Math.random() * 10, 2022: Math.random() * 10 },
-                    { name: 'F市公安局', 2021: Math.random() * 10, 2022: Math.random() * 10 },
-                    { name: 'G市公安局', 2021: Math.random() * 10, 2022: Math.random() * 10 },
-                    { name: 'H市公安局', 2021: Math.random() * 10, 2022: Math.random() * 10 },
-                    { name: 'I市公安局', 2021: Math.random() * 10, 2022: Math.random() * 10 },
+                    { name: 'A市公安局', 2021: Math.random() * 10, 2022: 3 },
+                    { name: 'B市公安局', 2021: 2, 2022: 3 },
+                    { name: 'C市公安局', 2021: 2, 2022: 3 },
+                    { name: 'D市公安局', 2021: 2, 2022: Math.random() * 10 },
+                    { name: 'E市公安局', 2021: 2, 2022: 3 },
+                    { name: 'F市公安局', 2021: 2, 2022: 3 },
+                    { name: 'G市公安局', 2021: Math.random() * 10, 2022: 3 },
+                    { name: 'H市公安局', 2021: 2, 2022: 3 },
+                    { name: 'I市公安局', 2021: 2, 2022: 3 },
                 ];
                 setData(newData);
             }, 1000);

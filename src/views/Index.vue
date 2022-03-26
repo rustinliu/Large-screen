@@ -40,7 +40,7 @@ export default {
     <div class="home">
         <header>
             <span></span>
-            <h1>公安部合成作战平台</h1>
+            <h1>广东省公安厅合成作战平台</h1>
             <span></span>
         </header>
         <main>

@@ -8,9 +8,22 @@ export default {
     setup() {
         const divRef = ref(null);
         const colors = ['#F46064', '#F38E1C', '#1CDB7C', '#8D70F8', '#33A4FA'];
-        onMounted(() => {
-            let myChart = echarts.init(divRef.value);
-            myChart.setOption(
+        const myChart = ref(null);
+        let flag = true;
+        const data = [
+            { value: 0.36, name: '刑事案件' },
+            { value: 0.2, name: '民事案件' },
+            { value: 0.18, name: '经济案件' },
+            { value: 0.24, name: '其他案件' },
+        ];
+        const newData = [
+            { value: 0.25, name: '刑事案件' },
+            { value: 0.18, name: '民事案件' },
+            { value: 0.38, name: '经济案件' },
+            { value: 0.19, name: '其他案件' },
+        ];
+        const setData = (data) => {
+            myChart.value.setOption(
                 createEchartsOptions({
                     color: colors,
                     xAxis: { show: false },
@@ -38,16 +51,24 @@ export default {
                                 shadowBlur: px(200),
                                 shadowColor: 'rgba(0, 0, 0, 0.5)',
                             },
-                            data: [
-                                { value: 0.36, name: '刑事案件' },
-                                { value: 0.2, name: '民事案件' },
-                                { value: 0.18, name: '经济案件' },
-                                { value: 0.24, name: '其他案件' },
-                            ],
+                            data: data,
                         },
                     ],
                 })
             );
+        };
+        onMounted(() => {
+            myChart.value = echarts.init(divRef.value);
+            setData(data);
+            setInterval(() => {
+                if (flag) {
+                    setData(newData);
+                } else {
+                    flag = false;
+                    setData(data);
+                }
+                flag = !flag;
+            }, 1000);
         });
 
         return {

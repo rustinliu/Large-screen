@@ -25,13 +25,13 @@ export default {
             setInterval(() => {
                 const newData = [
                     { name: 'A开发区', count: Math.floor(Math.random() * (50 - 10 + 1)) + 10 },
-                    { name: 'B开发区', count: Math.floor(Math.random() * (50 - 10 + 1)) + 10 },
-                    { name: 'C开发区', count: Math.floor(Math.random() * (50 - 10 + 1)) + 10 },
-                    { name: 'D开发区', count: Math.floor(Math.random() * (50 - 10 + 1)) + 10 },
+                    { name: 'B开发区', count: 43 },
+                    { name: 'C开发区', count: 54 },
+                    { name: 'D开发区', count: 35 },
                     { name: 'E开发区', count: Math.floor(Math.random() * (50 - 10 + 1)) + 10 },
-                    { name: 'F开发区', count: Math.floor(Math.random() * (50 - 10 + 1)) + 10 },
-                    { name: 'G开发区', count: Math.floor(Math.random() * (50 - 10 + 1)) + 10 },
-                    { name: 'H开发区', count: Math.floor(Math.random() * (50 - 10 + 1)) + 10 },
+                    { name: 'F开发区', count: 47 },
+                    { name: 'G开发区', count: 22 },
+                    { name: 'H开发区', count: 33 },
                     { name: 'I开发区', count: Math.floor(Math.random() * (50 - 10 + 1)) + 10 },
                 ];
                 setData(newData);
